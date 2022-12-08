@@ -108,10 +108,10 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save} }) => {
                           className="bg-white flex items-center gap-2 text-black font-bold p-1 pl-4 pr-4 rounded-full opacity-70 hover:100 hover:shadow-md"
                         >
                             <BsFillArrowUpRightCircleFill />
-                            {destination.length > 20 ? destination.slice(8,20) : destination.slice(8)}
+                            {destination?.length > 20 ? destination.slice(8,20) : destination.slice(8)}
                         </a>
                     )}
-                    {postedBy?._id === user.googleId && (
+                    {postedBy?._id === user?.googleId && (
                         <button
                         onClick={(e) => {
                             e.stopPropagation()

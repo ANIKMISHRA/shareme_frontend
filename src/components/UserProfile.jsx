@@ -84,11 +84,12 @@ const UserProfile = () => {
             />
             <img
               className="rounded-full w-30 h-30 -mt-10 shadow-xl object-cover"
-              src={user.image}
+              src={user?.image}
               alt="user-pic"
+              referrerPolicy="no-referrer"
             />
             <h1 className="font-bold text-center text-3xl mt-3">
-              {user.userName}
+              {user?.userName}
             </h1>
             <div className="absolute top-0 z-1 right-0 p-2">
               <GoogleLogout
